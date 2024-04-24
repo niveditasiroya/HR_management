@@ -2,7 +2,7 @@ import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegFileAlt } from "react-icons/fa";
 import { IoBagHandleOutline, IoCallOutline } from "react-icons/io5";
-import { MdOutlineCake } from "react-icons/md";
+import { MdOutlineCake, MdOutlineEmail } from "react-icons/md";
 import { SiIbmwatson } from "react-icons/si";
 
 const Info = () => {
@@ -14,6 +14,10 @@ const Info = () => {
     {
       name: "25 years old",
       Icon: MdOutlineCake,
+    },
+    {
+      name: "allan222@gmail.com",
+      Icon: MdOutlineEmail,
     },
     {
       name: "(541) 754-3013",
@@ -31,7 +35,7 @@ const Info = () => {
 
   return (
     <>
-      <div className="p-5 w-4/12 border-l shadow-md">
+      <div className="p-5 w-3/12 border-l shadow-md">
         <div className="flex flex-col justify-center items-center mb-8">
           <div className="h-32 w-32 mb-4">
             <img
@@ -51,21 +55,21 @@ const Info = () => {
           </select>
         </div>
         <hr />
-        <div className="py-8 flex flex-col gap-3">
+        <div className="py-8 flex flex-col gap-4">
           {details?.map((detail) => {
             const Icon = detail.Icon;
             return (
               <div className="flex gap-4 items-center">
-                <Icon />
+                <Icon className="text-blue-600" />
                 {detail?.name}
               </div>
             );
           })}
           <div className="flex gap-4">
             <div>
-              <FaRegFileAlt />
+              <FaRegFileAlt className="text-blue-600" />
             </div>
-            <p>
+            <p className="text-justify">
               A front-end developer builds the front-end portion of websites and
               web applications—the part users see and interact with. A front-end
               developer creates websites and applications using web languages

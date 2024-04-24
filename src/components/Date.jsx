@@ -9,7 +9,7 @@ const NowDate = () => {
 
   return (
     <div>
-      <p>{date}</p>
+      <p className="text-[12px]">{date}</p>
     </div>
   );
 };

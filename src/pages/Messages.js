@@ -5,15 +5,10 @@ import Contact from "../components/messages/Contact";
 
 const Messages = () => {
   return (
-    <div className="p-8">
-      <div className="flex bg-white">
-        {/* people in chat */}
-        <Contact />
-        {/* chat */}
-        <Chat />
-        {/* persion info */}
-        <Info />
-      </div>
+    <div className="h-[89.5vh] mx-8 flex bg-white">
+      <Contact />
+      <Chat />
+      <Info />
     </div>
   );
 };

@@ -4,6 +4,9 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { PiTelegramLogoLight } from "react-icons/pi";
 import EmpStatus from "../employees/EmpStatus";
+import { IoIosSearch } from "react-icons/io";
+import { CiFilter } from "react-icons/ci";
+import { FiFilter } from "react-icons/fi";
 
 const Contact = () => {
   const text = [
@@ -68,15 +71,34 @@ const Contact = () => {
     },
   ];
   return (
-    <div className="p-5 w-4/12 border-r shadow-md">
-      <div className="">
+    <div className="p-5 w-3/12 border-r shadow-md">
+      <div className="flex justify-between items-center">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Search"
+            className="border-2 rounded-md pl-8 py-0.5"
+          />
+          <IoIosSearch className="absolute top-2 left-2" />
+        </div>
+        <button>
+          <FiFilter />
+        </button>
+      </div>
+      
+      <div className="flex gap-8 px-5 py-3 border-b mb-2">
+        <p className="text-blue-500 underline">All</p>
+        <p>Unread</p>
+      </div>
+
+      <div className="h-[89%] overflow-y-scroll">
         {text?.map((detail) => {
           const Icon = detail.Icon;
 
           return (
             <div className="flex justify-between border-b p-3 border-r shadow-md">
               <div className="flex items-center gap-3">
-                <div className="h-14 w-14 mb-4">
+                <div className="h-12 w-20 mb-4">
                   <img
                     className="w-full h-full rounded-full"
                     src={detail.img}
@@ -98,7 +120,7 @@ const Contact = () => {
 
                 <div>
                   {detail.bages && (
-                    <span className="w-6 h-6 flex justify-center p-0.5 rounded-full bg-red-300">
+                    <span className="w-6 h-5 flex justify-center items-center p-0.5 rounded-full text-[13px] bg-red-300">
                       {detail.bages}
                     </span>
                   )}

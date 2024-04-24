@@ -2,7 +2,6 @@ import React from "react";
 import Data from "../components/dashboard/Data";
 import Employee from "../components/dashboard/Employee";
 import EmployeeData from "../components/dashboard/EmployeeData";
-import Toggle from "../components/employees/Toggle";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const Dashboard = () => {
